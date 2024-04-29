@@ -1,0 +1,33 @@
+//File name: _variables.scss
+// Variables
+
+// Fuentes
+$font-family: 'Kode Mono', monospace;
+$text-color-white: #FFFFFF;
+$default-background-color: white;
+
+// Colores usados
+$primary-color: #0C282B;
+$secondary-color: #9E5327;
+$tertiary-color: #505050;
+$cuatriary-color: #EEDDDD;
+$quintuary-color: #533535;
+
+//Footer 
+$footer-color: defaul-background-color;
+$border-color: lightgray;
+
+//Cajas 
+$box-background-color: defaul-background-color;
+$form-background-color: $cuatriary-color;
+
+// Otros
+$hover-brightness: 80%;
+
+// Media queries 
+$tablet-width: 600px;
+$desktop-width: 1024px;
+$map-height-desktop: 450px;
+$map-height-mobile: 300px;
+$max-width-tablet: 600px;
+$max-width-desktop: 700px;

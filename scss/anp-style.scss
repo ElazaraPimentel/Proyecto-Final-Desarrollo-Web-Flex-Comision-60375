@@ -1,0 +1,284 @@
+/* Nombre del archivo: anp-style.scss */
+/* Awante scss */
+
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/extend";
+@import "utilities/social-media";
+
+.container-01 {
+    @include container;
+}
+
+.container-02 {
+    @include container(80%);
+}
+
+.container-03 {
+    @include container(80%, $tertiary-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: $font-family;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-title {
+    /* Cambiando H1 por SEO para que no sea el título del sitio sino la parte más importante de cada página. */
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: $primary-color;
+}
+
+h1 {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: $secondary-color;
+    margin-bottom: 20px;
+    padding-left: .5rem;
+    padding-top: .5rem;
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: $tertiary-color;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: $quintuary-color;
+    text-shadow: 1px 1px 2px #000;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1rem;
+}
+
+// Estilo navegación
+nav {
+    background-color: $primary-color;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        padding: 3px;
+        margin: 0;
+
+        li {
+            margin-right: 5px;
+            padding: 3px;
+
+            a {
+                color: $text-color-white;
+                padding: 10px 15px;
+                display: block;
+            }
+        }
+    }
+}
+
+.centered-logo-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    color: $footer-color;
+}
+
+.service-container {
+    display: flex;
+    flex-direction: column; // Pone los divs uno arrriba del otro 
+    gap: 15px;
+
+    @media screen and (min-width: $tablet-width) {
+        // Usa tu punto de corte para tablets
+        flex-direction: row; // pantallas más anchas
+    }
+
+    >div {
+        flex: 1; // Un coso cada uno
+    }
+}
+
+.product,
+.product-01 {
+    border: 1px solid $border-color;
+    padding: 1rem;
+    text-align: center;
+
+    img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: contain;
+
+        &:hover {
+            filter: brightness(#{$hover-brightness});
+        }
+    }
+}
+
+.product-01 img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.products-container {
+    display: grid;
+    margin: 1rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @media screen and (min-width: $tablet-width) {
+        grid-template-columns: repeat(2, 1fr);
+
+        .img-siete {
+            display: block;
+            grid-column: span 2;
+        }
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        grid-template-columns: repeat(2, 1fr);
+
+        .img-siete {
+            display: block;
+            grid-column: span 2;
+        }
+    }
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @media (max-width: $tablet-width) {
+        grid-template-columns: 1fr; // Ajusta a una sola columna en pantallas más pequeñas
+    }
+}
+
+
+.contact-container-map,
+.contact-container-form {
+    border: 1px solid $border-color;
+    padding: 10px;
+    // Asegura que ambos elementos ocupen el espacio disponible por igual
+    flex: 1;
+}
+
+// Establece el contenedor del mapa para que use el 100% del ancho y altura disponible
+.contact-container-map {
+    width: 100%; // Asegura que el contenedor toma todo el ancho de su elemento padre
+    height: 450px; // Ajusta la altura según sea necesario para tu diseño
+
+    // Estilos para el iframe que contiene el mapa
+    iframe {
+        width: 100%; // Establece el ancho al 100% para llenar completamente el contenedor
+        height: 100%; // Establece la altura al 100% para llenar completamente el contenedor
+        border: none; // Elimina el borde del iframe
+    }
+}
+
+.contact-container-form {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: $box-background-color;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    max-width: $max-width-tablet; // Add this variable
+    margin: auto;
+
+    label {
+        font-size: 1rem;
+        color: $tertiary-color;
+        margin-bottom: 0.5rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1.2rem;
+        border: 1px solid $tertiary-color;
+        border-radius: 6px;
+        background-color: $text-color-white;
+        color: $primary-color;
+    }
+
+    .submit-button {
+        display: inline-block;
+        background-color: $primary-color;
+        color: $text-color-white;
+        text-align: center;
+        padding: 8px 10px;
+        text-decoration: none;
+        border-radius: 4px;
+        box-shadow: 8px 8px 8px $primary-color;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+            filter: brightness($hover-brightness);
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        padding: 25px;
+        max-width: $max-width-tablet; // Add this variable
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 30px;
+        max-width: $max-width-desktop; // Add this variable
+        flex-direction: row;
+        justify-content: space-between;
+
+        .submit-button {
+            width: auto;
+            padding: 12px 20px;
+        }
+    }
+}
+
+.whatsapp-icon {
+    position: fixed; // Fija el ícono durante el desplazamiento
+    bottom: 20px; // Distancia desde el fondo del viewport
+    right: 20px; // Distancia desde el lado derecho del viewport
+    z-index: 1000; // Asegura que el ícono esté sobre otros elementos de la página
+
+    img {
+        display: block;
+        width: 50px; // Establece el tamaño del ícono según sea necesario
+        height: 50px;
+    }
+}

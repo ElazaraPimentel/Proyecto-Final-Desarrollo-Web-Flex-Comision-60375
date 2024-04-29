@@ -1,0 +1,25 @@
+//file _extend.scss
+
+
+// Hacer contenedor como bootstrap y me está costando con navbar
+%container-bootstrap-like {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    padding-bottom: 4rem;
+    margin-top: 1rem;
+
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+
+    @media (min-width: 1400px) {
+        max-width: 1320px;
+    }
+}
