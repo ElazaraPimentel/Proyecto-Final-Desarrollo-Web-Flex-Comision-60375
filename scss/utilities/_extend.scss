@@ -1,25 +1,27 @@
-//file _extend.scss
+// File Name:  utilities/_extend.scss
 
-
-// Hacer contenedor como bootstrap y me está costando con navbar
+// contenedor tipo Bootstrap 
 %container-bootstrap-like {
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
-    margin-right: auto;
-    margin-left: auto;
-    box-sizing: border-box;
-    padding-bottom: 4rem;
-    margin-top: 1rem;
+    padding-right: 0.75rem; 
+    padding-left: 0.75rem; 
+    margin-right: auto; // centrar derecha
+    margin-left: auto; // centrar izquierda
+    box-sizing: border-box; // Caja así se achica para adentro
+    padding-bottom: 4rem; // abajo
+    margin-top: 1rem; // arriba
 
-    @media (min-width: 992px) {
-        max-width: 960px;
+    @media (min-width: $breakpoint-lg) {
+        // grandes de 992
+        max-width: $width-lg; // hastra 960px
     }
 
-    @media (min-width: 1200px) {
-        max-width: 1140px;
+    @media (min-width: $breakpoint-xl) {
+        // maś de 1200
+        max-width: $width-xl; // hasta 1104
     }
 
-    @media (min-width: 1400px) {
-        max-width: 1320px;
+    @media (min-width: $breakpoint-xxl) {
+        // más de 1400
+        max-width: $width-xxl; // hasta 1320px
     }
 }

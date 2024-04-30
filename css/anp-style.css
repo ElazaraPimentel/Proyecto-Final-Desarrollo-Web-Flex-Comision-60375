@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Nombre del archivo: anp-style.scss */
-/* Awante scss */
+/* Awante scss! */
 .container-03, .container-02, .container-01 {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
@@ -139,8 +139,9 @@ nav ul li a {
 }
 
 footer {
+  background-color: white;
   text-align: center;
-  color: defaul-background-color;
+  color: #9E5327;
 }
 
 .service-container {
@@ -236,7 +237,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 5px;
-  background-color: defaul-background-color;
+  background-color: white;
   border: 1px solid lightgray;
   border-radius: 10px;
   max-width: 600px;

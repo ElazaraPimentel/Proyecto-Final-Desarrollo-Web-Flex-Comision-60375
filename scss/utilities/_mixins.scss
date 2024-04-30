@@ -1,14 +1,4 @@
-//micins.scss
-
-// // Define the mixin in _mixins.scss
-@mixin container($percentage: 100%, $border-color: none) {
-    width: $percentage;
-
-    @if $border-color !=none {
-        border: 1px solid $border-color;
-        border-radius: if($percentage !=100%, 26px 80px, 0);
-    }
-}
+// utilities/micins.scss
 
 
 @mixin container($percentage: 80%, $border-color: none) {
